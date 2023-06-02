@@ -1,0 +1,38 @@
+{
+  "name": "xmap",
+  "version": "1.0.0-indev-1",
+  "description": "A utility for cross-map mod data conversion",
+  "main": "src/index.ts",
+  "type": "module",
+  "scripts": {
+    "format:check": "prettier --check {src,scripts}/**/*.{html,ts,cjs}",
+    "format:fix": "prettier --write {src,scripts}/**/*.{html,ts,cjs}",
+    "format": "npm run format:check && npm run format:fix",
+    "lint": "eslint src/**/*.{ts,cjs}",
+    "lint:ci": "npm run lint -- -f node_modules/eslint-formatter-azure-devops/index.js",
+    "lint:ts": "tsc --project tsconfig.json",
+    "test": "ts-node src/cli.ts",
+    "build": "ts-node scripts/build.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dr-vortex/xmap.git"
+  },
+  "author": "Dr. Vortex",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dr-vortex/xmap/issues"
+  },
+  "homepage": "https://github.com/dr-vortex/xmap#readme",
+  "devDependencies": {
+    "@types/node": "^20.2.5",
+    "@typescript-eslint/eslint-plugin": "^5.59.8",
+    "@typescript-eslint/parser": "^5.59.8",
+    "eslint": "^8.41.0",
+    "eslint-formatter-azure-devops": "^1.1.1",
+    "pkg": "^5.8.1",
+    "prettier": "^2.8.8",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.1.3"
+  }
+}

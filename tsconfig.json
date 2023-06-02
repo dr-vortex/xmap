@@ -1,0 +1,29 @@
+{
+	"compilerOptions": {
+		"lib": [ "ESNext", "DOM" ],
+		"module": "ESNext",
+		"target": "ESNext",
+		"moduleResolution": "bundler",
+		"noEmit": true,
+		"outDir": "dist/tmp/ts",
+		"typeRoots": [
+            "node_modules/@types"
+        ],
+		"resolveJsonModule": true,
+		"esModuleInterop": true,
+	},
+	"files": [
+		"src/index.ts"
+	],
+	"ts-node": {
+        "esm": true,
+		"experimentalSpecifierResolution": "node",
+    },
+	"include": [
+		"src/**/*.ts",
+		"scripts/*.ts"
+	],
+	"exclude": [
+		"node_modules"
+	]
+}
